@@ -29,8 +29,8 @@ ExternalProject_Add(
         EXCLUDE_FROM_ALL 1
 )
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/benchmark/sdsl/include)
-find_library(sdsl ${CMAKE_CURRENT_BINARY_DIR}/benchmark/sdsl/lib/libsdsl.a)
+set(SDSL_LIBRARY ${CMAKE_CURRENT_BINARY_DIR}/benchmark/sdsl/lib/libsdsl.a)
 
 add_executable(main_sdsl ${CMAKE_CURRENT_SOURCE_DIR}/main_sdsl.cpp)
 add_dependencies(main_sdsl xss fetch_sdsl)
-target_link_libraries(main_sdsl sdsl)
+target_link_libraries(main_sdsl ${SDSL_LIBRARY})
