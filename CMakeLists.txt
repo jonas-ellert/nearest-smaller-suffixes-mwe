@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.10.2 FATAL_ERROR)
 project(xss-mwe CXX C)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # MWE without using the SDSL
 include(ExternalProject)
 ExternalProject_Add(

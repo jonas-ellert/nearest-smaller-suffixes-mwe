@@ -2,7 +2,7 @@
 #include <xss_sdsl.hpp>
 
 int main(int argc, char const* argv[]) {
-  std::cout << "Hello MWE plain!" << std::endl;
+  std::cout << "Hello MWE sdsl!" << std::endl;
   std::string teststr = "$northamerica$";
   auto strptr = teststr.data();
   std::cout << teststr << " --- Length: " << teststr.size() << std::endl;
